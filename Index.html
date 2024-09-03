@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset Inventory Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Asset Inventory Management</h1>
+    
+    <!-- Form for adding or updating assets -->
+    <form id="inventoryForm">
+        <input type="hidden" id="assetIdToUpdate" name="assetIdToUpdate">
+        
+        <label for="employeeName">Employee Name:</label>
+        <input type="text" id="employeeName" name="employeeName" required><br><br>
+        
+        <label for="employeeId">Employee ID:</label>
+        <input type="text" id="employeeId" name="employeeId" required><br><br>
+        
+        <label for="cpuNo">CPU No:</label>
+        <input type="text" id="cpuNo" name="cpuNo" required><br><br>
+        
+        <label for="assetId">Asset ID:</label>
+        <input type="text" id="assetId" name="assetId" required><br><br>
+        
+        <label for="serialNumber">Serial Number/Service Tag:</label>
+        <input type="text" id="serialNumber" name="serialNumber" required><br><br>
+        
+        <label for="purchaseDate">Purchase Date:</label>
+        <input type="date" id="purchaseDate" name="purchaseDate" required><br><br>
+        
+        <label for="issuedDate">Issued Date:</label>
+        <input type="date" id="issuedDate" name="issuedDate"><br><br>
+        
+        <label for="issuedStatus">Issued Status:</label>
+        <select id="issuedStatus" name="issuedStatus" required>
+            <option value="Issued">Issued</option>
+            <option value="Not Issued">Not Issued</option>
+        </select><br><br>
+        
+        <label for="verificationStatus">Verification Status:</label>
+        <select id="verificationStatus" name="verificationStatus" required>
+            <option value="Verified">Verified</option>
+            <option value="Not Verified">Not Verified</option>
+        </select><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Search Asset</h2>
+    <form id="searchForm">
+        <label for="searchAssetId">Asset ID:</label>
+        <input type="text" id="searchAssetId" name="searchAssetId" required>
+        <input type="submit" value="Search">
+    </form>
+
+    <div id="results"></div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
